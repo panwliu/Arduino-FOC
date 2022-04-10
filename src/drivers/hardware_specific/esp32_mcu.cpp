@@ -1,6 +1,6 @@
 #include "../hardware_api.h"
 
-#if defined(ESP_H) && defined(ARDUINO_ARCH_ESP32) && defined(SOC_MCPWM_SUPPORTED) 
+// #if defined(ESP_H) && defined(ARDUINO_ARCH_ESP32) && defined(SOC_MCPWM_SUPPORTED) 
 
 #include "driver/mcpwm.h"
 #include "soc/mcpwm_reg.h"
@@ -437,4 +437,4 @@ void _writeDutyCycle6PWM(float dc_a,  float dc_b, float dc_c, float dead_zone, i
     }
   }
 }
-#endif
+// #endif
