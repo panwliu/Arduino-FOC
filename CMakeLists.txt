@@ -11,12 +11,14 @@ set(srcs
     "./src/drivers/hardware_specific/esp32_mcu.cpp"
     "./src/drivers/BLDCDriver3PWM.cpp"
     "./src/BLDCMotor.cpp"
+    "./src/sensors/MagneticSensorSPI.cpp"
     )
 
 set(includes "./src/common"
              "./src/common/base_classes"
              "./src/drivers"
              "./src/"
+             "./src/sensors"
                 )
 
 idf_component_register(SRCS "${srcs}"

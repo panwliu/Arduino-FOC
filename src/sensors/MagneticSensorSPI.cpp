@@ -75,6 +75,9 @@ void MagneticSensorSPI::init(SPIClass* _spi){
 	digitalWrite(chip_select_pin, HIGH);
 
   this->Sensor::init(); // call base class init
+
+  // printf("Hello");
+  // printf("MISO: %d\n", spi->_miso);
 }
 
 //  Shaft angle calculation
