@@ -1,7 +1,7 @@
 #include "../hardware_api.h"
 #include "../../drivers/hardware_api.h"
 
-#if defined(ESP_H) && defined(ARDUINO_ARCH_ESP32) && defined(SOC_MCPWM_SUPPORTED) 
+// #if defined(ESP_H) && defined(ARDUINO_ARCH_ESP32) && defined(SOC_MCPWM_SUPPORTED) 
 
 #include "esp32_adc_driver.h"
 
@@ -51,7 +51,7 @@ byte currentState = 1;
 
 // function reading an ADC value and returning the read voltage
 float _readADCVoltageLowSide(const int pin){
-  uint32_t raw_adc;
+  uint32_t raw_adc=0;
 
   if (pin == _pinA) raw_adc = a1;
   else if (pin == _pinB) raw_adc = a2;
@@ -121,4 +121,4 @@ static void IRAM_ATTR isr_handler(void*){
   if( _isset(_pinC) ) MCPWM[MCPWM_UNIT_0]->int_clr.timer2_tep_int_clr = mcpwm_intr_status_2;
 }
 
-#endif
+// #endif

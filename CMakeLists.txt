@@ -12,6 +12,10 @@ set(srcs
     "./src/drivers/BLDCDriver3PWM.cpp"
     "./src/BLDCMotor.cpp"
     "./src/sensors/MagneticSensorSPI.cpp"
+    # for current sensor
+    "./src/current_sense/hardware_specific/esp32_mcu.cpp"
+    "./src/current_sense/hardware_specific/esp32_adc_driver.cpp"
+    "./src/current_sense/InlineCurrentSense.cpp"
     )
 
 set(includes "./src/common"
@@ -19,6 +23,7 @@ set(includes "./src/common"
              "./src/drivers"
              "./src/"
              "./src/sensors"
+             "./src/current_sense"
                 )
 
 idf_component_register(SRCS "${srcs}"

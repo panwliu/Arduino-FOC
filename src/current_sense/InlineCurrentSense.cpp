@@ -45,6 +45,8 @@ void InlineCurrentSense::calibrateOffsets(){
     offset_ia = offset_ia / calibration_rounds;
     offset_ib = offset_ib / calibration_rounds;
     if(_isset(pinC)) offset_ic = offset_ic / calibration_rounds;
+
+    // printf("%f\t%f\n", offset_ia, offset_ib);
 }
 
 // read all three phase currents (if possible 2 or 3)

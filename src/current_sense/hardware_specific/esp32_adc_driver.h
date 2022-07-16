@@ -5,7 +5,7 @@
 
 #include "Arduino.h"
 
-#if defined(ESP_H) && defined(ARDUINO_ARCH_ESP32) && defined(SOC_MCPWM_SUPPORTED) 
+// #if defined(ESP_H) && defined(ARDUINO_ARCH_ESP32) && defined(SOC_MCPWM_SUPPORTED) 
 /*
  * Get ADC value for pin
  * */
@@ -85,4 +85,4 @@ bool __adcBusy(uint8_t pin);
 uint16_t __adcEnd(uint8_t pin);
 
 #endif /* SIMPLEFOC_ESP32_HAL_ADC_DRIVER_H_ */
-#endif /* ESP32 */
+// #endif /* ESP32 */
